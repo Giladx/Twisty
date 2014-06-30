@@ -1,0 +1,10 @@
+#N canvas 434 348 680 484 10;
+#X msg 320 20 send /active/crop/rectangular/right;
+#X msg 87 113 send /active/crop/rectangular bottom;
+#X msg 113 72 send /active/crop/rectangular/left;
+#X msg 74 164 send /active/crop/rectangular/top;
+#X msg 73 230 send /active/crop/circular/x;
+#X msg 70 202 send /active/crop/circular/y;
+#X msg 93 250 send /active/crop/circular/radius;
+#X obj 428 97 cnv 15 100 60 empty empty empty 20 12 0 14 -1 -262144
+0;
