@@ -1,6 +1,6 @@
 Twisty
 ======
 
-Twisty Tools is a puredata osc controller for lpmt
+Twisty Tools is a pd-extended osc controller for lpmt
 
 
