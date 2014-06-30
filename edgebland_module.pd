@@ -1,0 +1,10 @@
+#N canvas 596 257 450 300 10;
+#X msg 113 133 send /active/edgeblend/show;
+#X msg 106 165 send /active/edgeblend/power;
+#X msg 111 191 send /active/edgeblend/gamma;
+#X msg 101 215 send /active/edgeblend/liminance;
+#X msg 39 18 send /active/edgeblend/amount/left;
+#X msg 36 38 send /active/edgeblend/amount/right;
+#X msg 41 62 send /active/edgeblend/amount/top;
+#X msg 38 88 send /active/edgeblend/amount/bottom;
+#X msg 37 108 send /active/edgeblend/amount;

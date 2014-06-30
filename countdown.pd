@@ -1,0 +1,113 @@
+#N canvas 263 208 574 328 12;
+#N canvas 190 100 763 803 (subpatch) 0;
+#X obj 384 233 f;
+#X obj 377 279 - 1;
+#X obj 373 351 sel -1;
+#X obj 287 293 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 212 257 f;
+#X obj 195 304 - 1;
+#X obj 2 380 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 253 41 1;
+#X msg 297 41 0;
+#X obj 282 107 metro 1000;
+#X obj -26 164 bng 24 250 50 0 empty runbut start -4 -12 1 20 -262144
+-204800 -66577;
+#X obj -22 210 bng 15 250 50 0 empty empty stop -4 -5 0 12 -258113
+-258113 -1;
+#X obj 16 150 cnv 32 100 32 empty empty target: 18 14 1 24 -13381 -262144
+0;
+#X obj 14 202 cnv 32 100 32 empty process target? 18 15 1 24 -86277
+-262144 0;
+#X obj 146 155 nbx 2 24 0 59 0 0 empty empty minutes -12 -12 1 24 -228856
+-1 -1 0 256;
+#X obj 240 155 nbx 2 24 0 59 0 0 empty empty seconds -16 -12 1 24 -191407
+-1 -1 0 256;
+#X obj 147 206 nbx 2 24 0 59 0 0 empty empty min 2 -12 1 24 -228856
+-1 -1 0 256;
+#X obj 242 206 nbx 2 24 0 59 0 0 empty empty sec 4 -12 1 24 -191407
+-1 -1 0 256;
+#X obj 29 419 s re;
+#X obj 7 553 r re;
+#X obj 618 29 s re;
+#X msg -2 496 \; process label done!;
+#X msg 3 614 \; process label target?;
+#X msg -63 10 \; process label togo:;
+#X msg 381 35 \; process label stop!;
+#X msg -61 58 \; runbut color 23;
+#X msg 192 610 \; runbut color 7;
+#X msg 339 607 \; runbut color label 2;
+#X msg 441 196 59;
+#X obj 279 260 sel 59;
+#X obj 139 336 sel 0;
+#X msg 193 386 1;
+#X obj 166 434 spigot;
+#X obj 168 471 sel 0;
+#X msg 242 371 0;
+#X obj 4 584 del 3000;
+#X floatatom 288 353 5 0 0 0 - - -;
+#X floatatom 268 480 5 0 0 0 - - -;
+#X msg 179 27 5;
+#X obj -31 100 inlet;
+#X obj -62 463 outlet;
+#X connect 0 0 1 0;
+#X connect 0 0 17 0;
+#X connect 1 0 0 1;
+#X connect 1 0 2 0;
+#X connect 2 0 28 0;
+#X connect 3 0 4 0;
+#X connect 4 0 5 0;
+#X connect 4 0 16 0;
+#X connect 4 0 30 0;
+#X connect 4 0 36 0;
+#X connect 5 0 4 1;
+#X connect 6 0 8 0;
+#X connect 6 0 21 0;
+#X connect 6 0 18 0;
+#X connect 6 0 34 0;
+#X connect 6 0 40 0;
+#X connect 7 0 9 0;
+#X connect 8 0 9 0;
+#X connect 9 0 0 0;
+#X connect 10 0 9 0;
+#X connect 10 0 14 0;
+#X connect 10 0 15 0;
+#X connect 10 0 23 0;
+#X connect 10 0 25 0;
+#X connect 10 0 38 0;
+#X connect 11 0 8 0;
+#X connect 11 0 24 0;
+#X connect 11 0 20 0;
+#X connect 11 0 34 0;
+#X connect 14 0 4 0;
+#X connect 15 0 0 0;
+#X connect 17 0 29 0;
+#X connect 17 0 32 0;
+#X connect 19 0 26 0;
+#X connect 19 0 27 0;
+#X connect 19 0 35 0;
+#X connect 28 0 0 1;
+#X connect 29 0 3 0;
+#X connect 30 0 31 0;
+#X connect 30 1 34 0;
+#X connect 31 0 32 1;
+#X connect 32 0 33 0;
+#X connect 32 0 37 0;
+#X connect 33 0 6 0;
+#X connect 34 0 32 1;
+#X connect 35 0 22 0;
+#X connect 38 0 15 0;
+#X connect 39 0 10 0;
+#X coords 0 -1 1 1 368 116 2 -36 126;
+#X restore 112 92 pd;
+#X obj 112 70 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 112 216 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 112 43 inlet;
+#X obj 112 240 outlet;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;

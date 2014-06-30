@@ -1,0 +1,46 @@
+#N canvas 506 293 668 674 10;
+#X msg -7 359 send /active/greenscreen/color \$1 \$2 \$3 \$4;
+#X obj 1 1 cnv 15 200 200 empty empty green_screen 20 12 0 14 -1 -262144
+0;
+#X obj -102 137 float;
+#X obj 18 51 hsl 128 15 0 1 0 0 empty empty red 5 8 0 10 -258113 -1
+-262144 0 1;
+#X obj 18 67 hsl 128 15 0 1 0 0 empty empty green 5 8 0 10 -4034 -1
+-262144 0 1;
+#X obj 18 83 hsl 128 15 0 1 0 0 empty empty blue 5 8 0 10 -4160 -33289
+-262144 12700 1;
+#X obj 18 99 hsl 128 15 0 1 0 0 empty empty alpha 5 8 0 10 -162280
+-1 -262144 12700 1;
+#X obj -88 158 float;
+#X obj -75 179 float;
+#X obj -63 200 float;
+#X obj -43 306 trigger;
+#X obj 5 324 pack f f f f;
+#X msg 234 71 send /active/greenscreen \$1;
+#X obj 18 26 tgl 15 0 empty empty gs_on/off 17 7 0 10 -99865 -262144
+-262144 0 1;
+#X obj 203 236 s osc;
+#X obj 20 144 hsl 128 15 0 255 0 0 empty empty thrashold 5 8 0 10 -262144
+-1 -1 0 1;
+#X obj -61 245 float;
+#X msg 214 187 send /active/greenscreen/threshold \$1;
+#X connect 0 0 14 0;
+#X connect 2 0 11 0;
+#X connect 3 0 2 0;
+#X connect 4 0 7 0;
+#X connect 5 0 8 0;
+#X connect 6 0 9 0;
+#X connect 7 0 10 0;
+#X connect 7 0 11 1;
+#X connect 8 0 10 0;
+#X connect 8 0 11 2;
+#X connect 9 0 10 0;
+#X connect 9 0 11 3;
+#X connect 10 0 11 0;
+#X connect 11 0 0 0;
+#X connect 12 0 14 0;
+#X connect 13 0 12 0;
+#X connect 15 0 16 0;
+#X connect 15 0 17 0;
+#X connect 17 0 14 0;
+#X coords 0 -1 1 1 200 200 2 1 1;

@@ -1,0 +1,24 @@
+#N canvas 1 81 938 550 10;
+#X obj 100 100 cnv 15 110 140 empty empty appearance 10 12 0 14 -1
+-262144 0;
+#X obj -133 341 s osc;
+#X obj 107 206 bng 20 250 50 0 empty empty fullscreen 30 10 0 10 -260097
+-258113 -262144;
+#X obj 105 131 bng 20 250 50 0 empty empty display_gui 30 10 0 10 -258113
+-4034 -262144;
+#X obj 106 168 bng 20 250 50 0 empty empty setup_mode 30 10 0 10 -258113
+-4034 -262144;
+#X msg -87 276 send /projection/fullscreen/toggle;
+#X msg -133 221 send /projection/gui/toggle;
+#X msg -109 249 send projection/mode/setup/toggle;
+#X msg 36 346 send /projection/fullscreen/on;
+#X msg 16 404 send /projection/fullscreen/off;
+#X msg -64 311 send projection/mode/masksetup/toggle;
+#X connect 2 0 5 0;
+#X connect 3 0 6 0;
+#X connect 4 0 7 0;
+#X connect 5 0 1 0;
+#X connect 6 0 1 0;
+#X connect 7 0 1 0;
+#X connect 10 0 1 0;
+#X coords 0 -1 1 1 110 140 1 100 100;

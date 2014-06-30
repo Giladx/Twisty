@@ -1,0 +1,55 @@
+#N canvas 73 268 775 442 10;
+#X obj 1 1 cnv 15 225 130 empty empty Projection_controllers 20 12
+0 14 -1 -262144 0;
+#X obj 117 42 bng 20 250 50 0 empty empty resync -9 -9 0 10 -258113
+-4034 -262144;
+#X obj 77 42 bng 20 250 50 0 empty empty stop -3 -9 0 10 -258113 -4034
+-262144;
+#X obj 38 42 bng 20 250 50 0 empty empty start -3 -9 0 10 -258113 -4034
+-262144;
+#X obj 160 42 bng 20 250 50 0 empty empty mpe_server -12 -9 0 10 -258113
+-4034 -262144;
+#X obj 221 391 s osc;
+#X msg 419 237 send /projection/resync;
+#X msg 392 184 send /projection/start;
+#X msg 403 211 send /projection/stop;
+#X msg 377 162 send /projection/save;
+#X msg 368 135 send /projection/load;
+#X msg 348 110 send projection/mode/setup/on;
+#X msg 339 88 send projection/mode/setup/off;
+#X obj 33 98 bng 20 250 50 0 empty empty empty -9 -9 0 10 -258113 -4034
+-262144;
+#X obj 7 98 bng 20 250 50 0 empty empty mask_on/off -3 -9 0 10 -4034
+-258113 -262144;
+#X obj 169 96 bng 20 250 50 0 empty empty load -2 -9 0 10 -258113 -4034
+-262144;
+#X msg 427 264 send /projection/mpe;
+#X msg 444 287 send /projection/mode/masksetup/on;
+#X msg 457 311 send /projection/mode/masksetup/off;
+#X obj 199 96 bng 20 250 50 0 empty empty save -2 -9 0 10 -258113 -4034
+-262144;
+#X obj 84 97 bng 20 250 50 0 empty empty setup_on/off -2 -9 0 10 -4034
+-258113 -262144;
+#X obj 111 96 bng 20 250 50 0 empty empty empty -2 -9 0 10 -258113
+-4034 -262144;
+#X connect 1 0 6 0;
+#X connect 2 0 7 0;
+#X connect 3 0 8 0;
+#X connect 4 0 16 0;
+#X connect 6 0 5 0;
+#X connect 7 0 5 0;
+#X connect 8 0 5 0;
+#X connect 9 0 5 0;
+#X connect 10 0 5 0;
+#X connect 11 0 5 0;
+#X connect 12 0 5 0;
+#X connect 13 0 18 0;
+#X connect 14 0 17 0;
+#X connect 15 0 10 0;
+#X connect 16 0 5 0;
+#X connect 17 0 5 0;
+#X connect 18 0 5 0;
+#X connect 19 0 9 0;
+#X connect 20 0 11 0;
+#X connect 21 0 12 0;
+#X coords 0 -1 1 1 225 130 1 1 1;

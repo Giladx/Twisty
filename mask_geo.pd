@@ -1,0 +1,12 @@
+#N canvas 678 254 450 300 10;
+#X msg 201 134 send /active/mask;
+#X msg 199 164 send /active/mask/show;
+#X msg 201 194 send /active/invert;
+#X msg 41 129 send /active/deform/show;
+#X msg 32 161 send /active/deform/bezier;
+#X msg 24 258 send /active/deform/bezier/spherize/light;
+#X msg 18 234 send /active/deform/bezier/spherize/strong;
+#X msg 17 213 send /active/deform/bezier/reset;
+#X msg 17 35 send /active/deform/grid;
+#X msg 16 75 send /active/deform/grid/rows;
+#X msg 21 98 send /active/deform/grid/columns;

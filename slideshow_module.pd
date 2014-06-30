@@ -1,0 +1,7 @@
+#N canvas 65 153 450 300 10;
+#X msg 165 75 send /active/slideshow;
+#X msg 144 112 send /active/slideshow/show;
+#X msg 101 180 send /active/slideshow/folder;
+#X msg 158 214 send /active/slideshow/fit;
+#X msg 135 145 send /active/slideshow/keep_aspect;
+#X msg 153 45 send /active/slideshow/duration;

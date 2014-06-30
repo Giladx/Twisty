@@ -1,0 +1,108 @@
+#N canvas 1 79 1265 944 10;
+#X obj 1 1 cnv 15 240 340 empty empty active_quad_video 20 12 0 14
+-1 -262144 0;
+#X obj -113 277 float;
+#X obj -59 278 float;
+#X obj -151 63 float;
+#X obj -133 92 float;
+#X obj -108 131 float;
+#X obj -89 174 float;
+#X obj -157 316 pack f f f f;
+#X obj -123 246 trigger;
+#X obj -55 319 float;
+#X obj -199 516 s osc;
+#X msg -156 437 send /active/video/color \$1 \$2 \$3 \$4;
+#X msg 55 466 send /active/video/mult/x \$1;
+#X msg 54 401 send /active/video/mult/y \$1;
+#X msg -135 355 send /active/video/volume \$1;
+#X msg -72 411 send /active/video;
+#X msg -139 383 send /active/video/speed \$1;
+#X obj 21 68 hsl 128 15 0 1 0 0 empty empty red 5 8 0 10 -258113 -1
+-262144 0 1;
+#X obj 21 84 hsl 128 15 0 1 0 0 empty empty green 5 8 0 10 -4034 -1
+-262144 0 1;
+#X obj 21 100 hsl 128 15 0 1 0 0 empty empty blue 5 8 0 10 -4160 -33289
+-262144 0 1;
+#X obj 21 116 hsl 128 15 0 1 0 0 empty empty alpha 5 8 0 10 -162280
+-1 -262144 0 1;
+#X obj 23 152 hsl 128 15 0 10 0 0 empty empty video_volume -2 -10 0
+10 -99865 -1 -262144 0 1;
+#X floatatom 157 178 4 0 0 0 - - -;
+#X floatatom 157 199 4 0 0 0 - - -;
+#X obj 22 179 hsl 128 15 0 10 0 0 empty empty scale_x 5 8 0 10 -66577
+-262144 -262144 0 1;
+#X obj 22 200 hsl 128 15 0 10 0 0 empty empty scale_y 5 8 0 10 -66577
+-262144 -262144 0 1;
+#X obj 22 232 hsl 128 15 -2 2 0 0 empty empty video_speed -2 -8 0 10
+-4032 -33289 -262144 0 1;
+#X msg 16 253 -2;
+#X msg 44 253 -1;
+#X msg 74 253 0;
+#X msg 105 253 1;
+#X msg 136 253 2;
+#X msg 244 405 send /active/video/show \$1;
+#X msg -179 153 send /active/video/load;
+#X obj 127 45 bng 15 250 50 0 empty empty load_video 25 7 0 10 -258113
+-262144 -262144;
+#X msg 69 374 send /active/video/hmirror \$1;
+#X msg 137 351 send /active/video/vmirror \$1;
+#X obj 84 526 s osc;
+#X obj 88 279 tgl 15 0 empty empty loop_on/off 20 7 0 10 -260097 -262144
+-262144 0 1;
+#X obj 16 297 tgl 15 0 empty empty flip_h 17 7 0 10 -99865 -262144
+-262144 0 1;
+#X obj 16 278 tgl 15 0 empty empty flip_v 20 7 0 10 -128992 -262144
+-262144 0 1;
+#X obj 19 44 tgl 15 0 empty empty video_on/off 20 7 0 10 -99865 -262144
+-262144 0 1;
+#X msg 143 502 send /active/video/loop \$1;
+#X msg 263 380 send /active/video/greenscreen \$1;
+#X obj 88 299 tgl 15 0 empty empty green_screen 20 7 0 10 -99865 -262144
+-262144 0 1;
+#X text 358 93;
+#X connect 1 0 12 0;
+#X connect 2 0 13 0;
+#X connect 3 0 7 0;
+#X connect 4 0 8 0;
+#X connect 4 0 7 1;
+#X connect 5 0 8 0;
+#X connect 5 0 7 2;
+#X connect 6 0 8 0;
+#X connect 6 0 7 3;
+#X connect 7 0 11 0;
+#X connect 8 0 7 0;
+#X connect 9 0 16 0;
+#X connect 11 0 10 0;
+#X connect 12 0 37 0;
+#X connect 13 0 37 0;
+#X connect 14 0 10 0;
+#X connect 15 0 10 0;
+#X connect 16 0 10 0;
+#X connect 17 0 3 0;
+#X connect 18 0 4 0;
+#X connect 19 0 5 0;
+#X connect 20 0 6 0;
+#X connect 21 0 14 0;
+#X connect 24 0 22 0;
+#X connect 24 0 1 0;
+#X connect 25 0 23 0;
+#X connect 25 0 2 0;
+#X connect 26 0 9 0;
+#X connect 27 0 26 0;
+#X connect 28 0 26 0;
+#X connect 29 0 26 0;
+#X connect 30 0 26 0;
+#X connect 31 0 26 0;
+#X connect 32 0 37 0;
+#X connect 33 0 10 0;
+#X connect 34 0 33 0;
+#X connect 35 0 37 0;
+#X connect 36 0 37 0;
+#X connect 38 0 42 0;
+#X connect 39 0 36 0;
+#X connect 40 0 35 0;
+#X connect 41 0 15 0;
+#X connect 42 0 37 0;
+#X connect 43 0 37 0;
+#X connect 44 0 43 0;
+#X coords 0 -1 1 1 240 340 1 1 1;

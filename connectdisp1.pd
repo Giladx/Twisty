@@ -1,0 +1,24 @@
+#N canvas 521 289 450 300 10;
+#X obj 14 179 s osc;
+#X obj 1 1 cnv 15 140 100 empty empty Connect_Displays 10 12 0 14 -1
+-262144 0;
+#X obj 15 29 bng 25 250 50 0 empty empty 1 10 13 0 10 -258113 -4034
+-262144;
+#X obj 43 29 bng 25 250 50 0 empty empty 2 10 13 0 10 -258113 -4034
+-262144;
+#X obj 71 29 bng 25 250 50 0 empty empty 3 10 13 0 10 -258113 -4034
+-262144;
+#X obj 99 28 bng 25 250 50 0 empty empty 4 10 13 0 10 -258113 -4034
+-262144;
+#X obj 14 58 bng 25 250 50 0 empty empty 5 10 13 0 10 -258113 -4034
+-262144;
+#X obj 43 58 bng 25 250 50 0 empty empty 6 10 13 0 10 -258113 -4034
+-262144;
+#X obj 72 58 bng 25 250 50 0 empty empty 7 10 13 0 10 -258113 -4034
+-262144;
+#X obj 100 58 bng 25 250 50 0 empty empty 8 10 13 0 10 -258113 -4034
+-262144;
+#X msg 13 148 connect 10.0.0.1 12345;
+#X connect 2 0 10 0;
+#X connect 10 0 0 0;
+#X coords 0 -1 1 1 140 100 2 1 1;

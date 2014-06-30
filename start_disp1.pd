@@ -1,0 +1,32 @@
+#N canvas 352 316 342 303 10;
+#X obj 91 219 print;
+#X msg 7 111 ./lpmt.sh;
+#X obj 1 1 cnv 15 140 100 empty empty Start_Displays 10 12 0 14 -1
+-262144 0;
+#X obj 14 31 bng 25 250 50 0 empty empty 1 10 13 0 10 -258113 -4034
+-262144;
+#X obj 90 191 shell;
+#X obj 42 31 bng 25 250 50 0 empty empty 2 10 13 0 10 -258113 -4034
+-262144;
+#X obj 70 31 bng 25 250 50 0 empty empty 3 10 13 0 10 -258113 -4034
+-262144;
+#X obj 98 30 bng 25 250 50 0 empty empty 4 10 13 0 10 -258113 -4034
+-262144;
+#X obj 13 60 bng 25 250 50 0 empty empty 5 10 13 0 10 -258113 -4034
+-262144;
+#X obj 42 60 bng 25 250 50 0 empty empty 6 10 13 0 10 -258113 -4034
+-262144;
+#X obj 71 60 bng 25 250 50 0 empty empty 7 10 13 0 10 -258113 -4034
+-262144;
+#X obj 99 60 bng 25 250 50 0 empty empty 8 10 13 0 10 -258113 -4034
+-262144;
+#X obj 143 220 print;
+#X obj 142 192 shell;
+#X msg 84 116 gimp;
+#X connect 1 0 4 0;
+#X connect 3 0 1 0;
+#X connect 4 0 0 0;
+#X connect 5 0 14 0;
+#X connect 13 0 12 0;
+#X connect 14 0 13 0;
+#X coords 0 -1 1 1 140 100 2 1 1;
