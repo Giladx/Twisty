@@ -1,0 +1,49 @@
+#N canvas 313 263 556 555 10;
+#X obj 183 237 s osc;
+#X msg 87 268 send /active/blendmodes/show \$1;
+#X msg 270 187 send /active/blendmodes/mode \$1;
+#X msg 241 -47 symbol add;
+#X msg 443 -38 symbol multiply;
+#X msg 331 -47 symbol subtract;
+#X obj 100 100 cnv 15 150 100 empty empty blending_modes 5 12 0 16
+-1 -262144 0;
+#X symbolatom 108 172 10 0 0 0 - - screen;
+#X msg 89 -44 symbol screen;
+#X msg 271 121 0;
+#X msg 301 121 1;
+#X msg 332 123 2;
+#X msg 365 123 3;
+#X obj 110 132 tgl 15 0 empty empty on/off 17 7 0 10 -191407 -262144
+-262144 0 1;
+#X obj 106 151 bng 15 250 50 0 empty empty 0 5 8 0 10 -1 -191407 -262144
+;
+#X obj 121 151 bng 15 250 50 0 empty empty 1 5 8 0 10 -1 -191407 -262144
+;
+#X obj 137 151 bng 15 250 50 0 empty empty 2 5 8 0 10 -1 -191407 -262144
+;
+#X obj 153 151 bng 15 250 50 0 empty empty 3 5 8 0 10 -1 -191407 -262144
+;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 10 0;
+#X connect 3 0 7 0;
+#X connect 4 0 12 0;
+#X connect 4 0 7 0;
+#X connect 5 0 11 0;
+#X connect 5 0 7 0;
+#X connect 8 0 9 0;
+#X connect 8 0 7 0;
+#X connect 9 0 2 0;
+#X connect 9 0 8 0;
+#X connect 10 0 2 0;
+#X connect 10 0 3 0;
+#X connect 11 0 2 0;
+#X connect 11 0 5 0;
+#X connect 12 0 2 0;
+#X connect 12 0 4 0;
+#X connect 13 0 1 0;
+#X connect 14 0 9 0;
+#X connect 15 0 10 0;
+#X connect 16 0 11 0;
+#X connect 17 0 12 0;
+#X coords 0 -1 1 1 150 100 2 100 100;
