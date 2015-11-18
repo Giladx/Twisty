@@ -1,4 +1,4 @@
-#N canvas 0 80 1280 943 10;
+#N canvas 0 85 1280 939 10;
 #X obj -1 0 cnv 15 1270 1010 empty empty Twisty_lpmtX_controller 15
 20 0 24 -33289 -262144 0;
 #X obj 204 431 image_module 0;
@@ -13,7 +13,6 @@
 #X obj 907 6 keys 0;
 #X obj 556 444 placement_module 0;
 #X obj 318 80 projection_controllers 0;
-#X obj 738 643 bland_modes;
 #X obj 572 636 green_screen_module 0;
 #X obj 17 81 timeline_settings 0;
 #N canvas 565 531 293 300 quad11 0;
@@ -28,7 +27,7 @@
 #N canvas 710 572 293 289 quad13 0;
 #X obj -58 -15 grid_quad13;
 #X restore 1003 445 pd quad13;
-#N canvas 508 363 298 287 quad00 0;
+#N canvas 506 368 298 287 quad00 0;
 #X obj 4 -86 grid_quad0;
 #X restore 943 390 pd quad00;
 #N canvas 726 404 294 300 quad01 0;
@@ -69,4 +68,5 @@
 #X obj 738 413 edgebland_module;
 #X obj 708 173 mask_deform;
 #X obj 395 208 kinect_module;
+#X obj 739 649 blend_modes;
 #X coords 0 -1 1 1 1270 1010 1 0 0;
