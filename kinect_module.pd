@@ -1,24 +1,131 @@
-#N canvas 409 426 559 462 10;
-#X msg 68 80 send /active/kinect;
-#X msg 68 104 send /active/kinect/show;
-#X msg 69 130 send /active/kinect/open;
-#X msg 70 157 send /active/kinect/close;
-#X msg 73 205 send /active/kinect/show/grayscale;
-#X msg 68 183 send /active/kinect/show/image;
-#X msg 69 230 send /active/kinect/mask;
-#X msg 58 37 send /active/kinect/mult/x;
-#X msg 63 59 send /active/kinect/mult/y;
-#X msg 302 -2 send /active/kinect/scale/x;
-#X msg 301 -24 send /active/kinect/scale/y;
-#X msg 301 23 send /active/kinect/threshold/near;
-#X msg 300 50 send /active/kinect/threshold/far;
-#X msg 301 83 send /active/kinect/angle;
-#X msg 302 103 send /active/kinect/blur;
-#X msg 304 178 send /active/kinect/contour/curves;
-#X msg 302 154 send /active/kinect/contour;
-#X msg 303 209 send /active/kinect/contour/smooth;
-#X msg 303 246 send /active/kinect/contour/simplify;
-#X msg 306 269 send /active/kinect/contour/area/min;
-#X msg 306 289 send /active/kinect/contour/area/max;
-#X msg 304 320 send /active/kinect/contour/area;
-#X msg 57 7 send /active/kinect/color \$1 \$2 \$3 \$4;
+#N canvas 150 233 1061 666 10;
+#X msg 359 383 send /active/kinect/contour/simplify;
+#X msg -190 280 send /active/kinect/color \$1 \$2 \$3 \$4;
+#X obj -200 121 float;
+#X obj -186 149 float;
+#X obj -163 172 float;
+#X obj -147 203 float;
+#X obj -202 219 trigger;
+#X obj -203 250 pack f f f f;
+#X obj -183 342 s osc;
+#X obj 100 100 cnv 15 160 390 empty empty kinect 20 12 0 14 -33289
+-262144 0;
+#X obj 112 251 hsl 128 15 0 1 0 0 empty empty red 5 8 0 10 -258113
+-1 -262144 0 1;
+#X obj 112 267 hsl 128 15 0 1 0 0 empty empty green 5 8 0 10 -4034
+-1 -262144 0 1;
+#X obj 112 283 hsl 128 15 0 1 0 0 empty empty blue 5 8 0 10 -4160 -33289
+-262144 0 1;
+#X obj 112 299 hsl 128 15 0 1 0 0 empty empty alpha 5 8 0 10 -162280
+-1 -262144 0 1;
+#X floatatom 246 209 2 0 0 0 - - -;
+#X floatatom 246 230 2 0 0 0 - - -;
+#X obj 111 210 hsl 128 15 0 10 0 0 empty empty scale_x 5 8 0 10 -66577
+-262144 -262144 1000 1;
+#X obj 111 231 hsl 128 15 0 10 0 0 empty empty scale_y 5 8 0 10 -66577
+-262144 -262144 1400 1;
+#X msg -106 113 send /active/kinect/mult/x \$1;
+#X msg -107 135 send /active/kinect/mult/y \$1;
+#X obj 106 124 tgl 15 0 empty empty kinect_on/off 17 7 0 10 -99865
+-262144 -262144 1 1;
+#X msg 325 -28 send /active/kinect/show \$1;
+#X obj 107 144 tgl 15 0 empty empty show_image 17 7 0 10 -99865 -262144
+-262144 1 1;
+#X obj 108 166 tgl 15 0 empty empty gray_scale 17 7 0 10 -99865 -262144
+-262144 0 1;
+#X obj 109 188 tgl 15 0 empty empty set_as_mask 17 7 0 10 -99865 -262144
+-262144 1 1;
+#X obj 443 266 s osc;
+#X msg 238 512 send /active/kinect/open \$1;
+#X msg 240 538 send /active/kinect/close \$1;
+#X msg 326 -1 send /active/kinect/show/image \$1;
+#X msg 328 24 send /active/kinect/show/grayscale \$1;
+#X msg 329 49 send /active/kinect/mask \$1;
+#X obj 113 318 hsl 128 15 0 255 0 0 empty empty near 5 8 0 10 -66577
+-262144 -262144 12700 1;
+#X obj 113 337 hsl 128 15 0 255 0 0 empty empty far 5 8 0 10 -66577
+-262144 -262144 9600 1;
+#X msg -112 27 send /active/kinect/threshold/near \$1;
+#X msg -111 49 send /active/kinect/threshold/far \$1;
+#X obj 113 355 hsl 128 15 -30 30 0 0 empty empty tilt 5 8 0 10 -66577
+-262144 -262144 7800 1;
+#X floatatom 245 355 2 0 0 0 - - -;
+#X obj 114 373 hsl 128 15 0 10 0 0 empty empty blur 5 8 0 10 -66577
+-262144 -262144 12700 1;
+#X msg -107 93 send /active/kinect/blur \$1;
+#X msg -109 73 send /active/kinect/angle \$1;
+#X obj 114 391 hsl 128 15 0.01 1 0 0 empty empty min_area 5 8 0 10
+-66577 -262144 -262144 4400 1;
+#X obj 114 410 hsl 128 15 0 1 0 0 empty empty max_area 5 8 0 10 -66577
+-262144 -262144 1500 1;
+#X msg 358 315 send /active/kinect/contour/area/min \$1;
+#X msg 357 337 send /active/kinect/contour/area/max \$1;
+#X obj 115 429 hsl 128 15 0 20 0 0 empty empty smooth 5 8 0 10 -66577
+-262144 -262144 12700 1;
+#X msg 357 361 send /active/kinect/contour/smooth \$1;
+#X obj 115 448 hsl 128 15 0 2 0 0 empty empty simplipy 5 8 0 10 -66577
+-262144 -262144 12700 1;
+#X obj 114 469 bng 15 250 50 0 empty empty close 17 7 0 10 -99865 -262144
+-262144;
+#X obj 177 470 bng 15 250 50 0 empty empty reopen 17 7 0 10 -99865
+-262144 -262144;
+#X obj 265 568 s osc;
+#X msg -113 -14 send /active/kinect/contour \$1;
+#X msg -113 7 send /active/kinect/contour/curves \$1;
+#X obj 189 143 tgl 15 0 empty empty contour 17 7 0 10 -99865 -262144
+-262144 0 1;
+#X obj 189 163 tgl 15 0 empty empty curve 17 7 0 10 -99865 -262144
+-262144 0 1;
+#X connect 1 0 8 0;
+#X connect 2 0 7 0;
+#X connect 3 0 7 1;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 4 0 7 2;
+#X connect 5 0 7 3;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 7 0 1 0;
+#X connect 10 0 2 0;
+#X connect 11 0 3 0;
+#X connect 12 0 4 0;
+#X connect 13 0 5 0;
+#X connect 16 0 14 0;
+#X connect 16 0 18 0;
+#X connect 17 0 15 0;
+#X connect 17 0 19 0;
+#X connect 18 0 8 0;
+#X connect 19 0 8 0;
+#X connect 20 0 21 0;
+#X connect 21 0 25 0;
+#X connect 22 0 28 0;
+#X connect 23 0 29 0;
+#X connect 24 0 30 0;
+#X connect 26 0 49 0;
+#X connect 27 0 49 0;
+#X connect 28 0 25 0;
+#X connect 29 0 25 0;
+#X connect 30 0 25 0;
+#X connect 31 0 33 0;
+#X connect 32 0 34 0;
+#X connect 33 0 8 0;
+#X connect 34 0 8 0;
+#X connect 35 0 36 0;
+#X connect 35 0 39 0;
+#X connect 37 0 38 0;
+#X connect 38 0 8 0;
+#X connect 39 0 8 0;
+#X connect 40 0 42 0;
+#X connect 41 0 43 0;
+#X connect 42 0 25 0;
+#X connect 43 0 25 0;
+#X connect 44 0 45 0;
+#X connect 45 0 25 0;
+#X connect 46 0 0 0;
+#X connect 47 0 27 0;
+#X connect 48 0 26 0;
+#X connect 50 0 8 0;
+#X connect 51 0 8 0;
+#X connect 52 0 50 0;
+#X connect 53 0 51 0;
+#X coords 0 -1 1 1 160 390 2 100 100;

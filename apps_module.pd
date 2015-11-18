@@ -1,36 +1,41 @@
-#N canvas 277 187 450 300 10;
-#X obj 69 261 shell;
-#X obj 69 284 print;
-#X msg 69 238 winff;
-#X obj 100 100 cnv 15 100 130 empty empty apps 20 12 0 14 -1 -262144
+#N canvas 277 199 480 437 10;
+#X obj 63 344 shell;
+#X obj 63 367 print;
+#X msg 63 321 winff;
+#X obj 100 100 cnv 15 100 140 empty empty apps 20 12 0 14 -1 -262144
 0;
 #X obj 104 125 bng 15 250 50 0 empty empty winff_encoder 17 7 0 10
 -262144 -1 -262144;
-#X obj 69 336 shell;
-#X obj 69 359 print;
-#X msg 69 312 gimp;
+#X obj 63 419 shell;
+#X obj 63 442 print;
+#X msg 63 395 gimp;
 #X obj 124 142 bng 15 250 50 0 empty empty gimp 17 7 0 10 -262144 -1
 -262144;
 #X obj 104 161 bng 15 250 50 0 empty empty blender_3d 17 7 0 10 -262144
 -1 -262144;
-#X obj 113 263 shell;
-#X obj 113 286 print;
-#X obj 116 338 shell;
-#X obj 116 361 print;
-#X obj 25 260 shell;
-#X obj 25 283 print;
-#X msg 25 237 vlc;
+#X obj 107 346 shell;
+#X obj 107 369 print;
+#X obj 110 421 shell;
+#X obj 110 444 print;
+#X obj 19 343 shell;
+#X obj 19 366 print;
+#X msg 19 320 vlc;
 #X obj 121 178 bng 15 250 50 0 empty empty vlc 17 7 0 10 -262144 -1
 -262144;
-#X msg 116 314 nvidia-settings;
+#X msg 110 397 nvidia-settings;
 #X obj 104 195 bng 15 250 50 0 empty empty nvidia 17 7 0 10 -4034 -262144
 -262144;
-#X msg 113 239 blender -W;
-#X obj 186 265 shell;
-#X obj 186 288 print;
-#X obj 122 211 bng 15 250 50 0 empty empty task 17 7 0 10 -258113 -4034
+#X msg 107 322 blender -W;
+#X obj 180 348 shell;
+#X obj 180 371 print;
+#X obj 104 223 bng 15 250 50 0 empty empty monitor 17 7 0 10 -262144
+-1 -262144;
+#X msg 313 324 gksu /usr/bin/amdcccle;
+#X obj 120 209 bng 15 250 50 0 empty empty AMD 17 7 0 10 -258113 -1
 -262144;
-#X msg 186 241 mate-system-monitor;
+#X obj 313 354 shell;
+#X obj 313 380 print;
+#X msg 180 324 mate-system-monitor;
 #X connect 0 0 1 0;
 #X connect 2 0 0 0;
 #X connect 4 0 2 0;
@@ -47,6 +52,9 @@
 #X connect 19 0 18 0;
 #X connect 20 0 10 0;
 #X connect 21 0 22 0;
-#X connect 23 0 24 0;
-#X connect 24 0 21 0;
-#X coords 0 -1 1 1 100 130 2 100 100;
+#X connect 23 0 28 0;
+#X connect 24 0 26 0;
+#X connect 25 0 24 0;
+#X connect 26 0 27 0;
+#X connect 28 0 21 0;
+#X coords 0 -1 1 1 100 140 2 100 100;

@@ -1,6 +1,6 @@
-#N canvas 519 294 450 300 10;
+#N canvas 519 309 450 300 10;
 #X obj 14 179 s osc;
-#X obj 1 1 cnv 15 140 100 empty empty Connect_Displays 10 12 0 14 -1
+#X obj 1 1 cnv 15 140 100 empty empty Connect_Displays 10 12 0 14 -33289
 -262144 0;
 #X obj 15 29 bng 25 250 50 0 empty empty 1 10 13 0 10 -258113 -4034
 -262144;

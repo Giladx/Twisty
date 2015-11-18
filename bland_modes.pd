@@ -1,4 +1,4 @@
-#N canvas 313 263 556 555 10;
+#N canvas 313 284 556 555 10;
 #X obj 183 237 s osc;
 #X msg 87 268 send /active/blendmodes/show \$1;
 #X msg 270 187 send /active/blendmodes/mode \$1;
@@ -6,7 +6,7 @@
 #X msg 443 -38 symbol multiply;
 #X msg 331 -47 symbol subtract;
 #X obj 100 100 cnv 15 150 100 empty empty blending_modes 5 12 0 16
--1 -262144 0;
+-33289 -262144 0;
 #X symbolatom 108 172 10 0 0 0 - - screen;
 #X msg 89 -44 symbol screen;
 #X msg 271 121 0;

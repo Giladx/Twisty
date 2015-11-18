@@ -1,10 +1,55 @@
-#N canvas 596 257 450 300 10;
-#X msg 113 133 send /active/edgeblend/show;
-#X msg 106 165 send /active/edgeblend/power;
-#X msg 111 191 send /active/edgeblend/gamma;
-#X msg 101 215 send /active/edgeblend/liminance;
-#X msg 39 18 send /active/edgeblend/amount/left;
-#X msg 36 38 send /active/edgeblend/amount/right;
-#X msg 41 62 send /active/edgeblend/amount/top;
-#X msg 38 88 send /active/edgeblend/amount/bottom;
-#X msg 37 108 send /active/edgeblend/amount;
+#N canvas 3 137 688 555 10;
+#X obj 100 100 cnv 15 160 230 empty empty edge_blend 20 12 0 14 -33289
+-262144 0;
+#X obj 106 127 tgl 15 0 empty empty bland_on/off 17 7 0 10 -99865 -262144
+-262144 0 1;
+#X obj 145 157 hsl 32 15 0 0.5 0 0 empty empty top -2 -8 0 10 -99865
+-262144 -262144 0 1;
+#X obj 187 190 hsl 32 15 0 0.5 0 0 empty empty right -2 -8 0 10 -99865
+-262144 -262144 0 1;
+#X obj 153 229 hsl 32 15 0 0.5 0 0 empty empty bottom -2 -8 0 10 -99865
+-262144 -262144 0 1;
+#X obj 106 189 hsl 32 15 0 0.5 0 0 empty empty left -2 -8 0 10 -99865
+-262144 -262144 0 1;
+#X obj -132 381 s osc;
+#X msg -149 328 send /active/edgeblend/show \$1;
+#X msg -184 219 send /active/edgeblend/amount/left \$1;
+#X msg -190 240 send /active/edgeblend/amount/right \$1;
+#X msg -183 258 send /active/edgeblend/amount/top \$1;
+#X msg -185 280 send /active/edgeblend/amount/bottom \$1;
+#X msg 62 374 send /active/edgeblend/power \$1;
+#X msg 61 400 send /active/edgeblend/gamma \$1;
+#X msg 57 427 send /active/edgeblend/liminance \$1;
+#X floatatom 181 156 5 0 0 0 - - -;
+#X floatatom 142 188 5 0 0 0 - - -;
+#X floatatom 222 189 5 0 0 0 - - -;
+#X floatatom 187 228 5 0 0 0 - - -;
+#X floatatom 50 66 5 0 0 3 - - -;
+#X obj 110 254 hsl 128 15 0 4 0 0 empty empty power -2 -8 0 10 -99865
+-262144 -262144 0 1;
+#X obj 110 282 hsl 128 15 0 4 0 0 empty empty gamma -2 -8 0 10 -99865
+-262144 -262144 0 1;
+#X obj 112 311 hsl 128 15 0 4 0 0 empty empty liminance -2 -8 0 10
+-99865 -262144 -262144 0 1;
+#X connect 1 0 7 0;
+#X connect 2 0 10 0;
+#X connect 2 0 15 0;
+#X connect 3 0 9 0;
+#X connect 3 0 17 0;
+#X connect 4 0 11 0;
+#X connect 4 0 18 0;
+#X connect 5 0 8 0;
+#X connect 5 0 16 0;
+#X connect 7 0 6 0;
+#X connect 8 0 6 0;
+#X connect 9 0 6 0;
+#X connect 10 0 6 0;
+#X connect 11 0 6 0;
+#X connect 12 0 6 0;
+#X connect 13 0 6 0;
+#X connect 14 0 6 0;
+#X connect 19 0 2 0;
+#X connect 20 0 12 0;
+#X connect 21 0 13 0;
+#X connect 22 0 14 0;
+#X coords 0 -1 1 1 160 230 2 100 100;

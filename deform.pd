@@ -1,0 +1,51 @@
+#N canvas 551 235 556 555 10;
+#X obj 100 100 cnv 15 200 140 empty empty deform 20 12 0 14 -33289
+-262144 0;
+#X obj 112 131 tgl 15 0 empty empty deform_on/off 17 7 0 10 -99865
+-262144 -262144 1 1;
+#X obj 112 152 tgl 15 0 empty empty bezier 17 7 0 10 -99865 -262144
+-262144 1 1;
+#X obj 112 171 tgl 15 0 empty empty grid 17 7 0 10 -99865 -262144 -262144
+0 1;
+#X obj 117 196 hsl 128 15 2 15 0 0 empty empty rows 5 8 0 10 -99865
+-262144 -262144 0 1;
+#X obj 119 217 hsl 128 15 2 20 0 0 empty empty columns 5 8 0 10 -99865
+-262144 -262144 0 1;
+#X obj 174 153 bng 15 250 50 0 empty empty spherize_light 17 7 0 10
+-99865 -262144 -262144;
+#X obj 174 173 bng 15 250 50 0 empty empty spherize_strong 17 7 0 10
+-99865 -262144 -262144;
+#X obj 213 129 bng 15 250 50 0 empty empty reset_warp 17 7 0 10 -99865
+-262144 -262144;
+#X obj 166 376 s osc;
+#X obj 255 205 tgl 15 0 empty empty edit 17 7 0 10 -99865 -262144 -262144
+0 1;
+#X obj 159 464 s osc;
+#X msg 298 261 send /active/deform/edit \$1;
+#X msg 296 318 send /active/deform/spherize/strong \$1;
+#X msg 299 342 send /active/deform/reset \$1;
+#X msg 117 399 send /active/deform/grid/rows \$1;
+#X msg 113 324 send /active/deform/grid \$1;
+#X msg 113 302 send /active/deform/bezier \$1;
+#X msg 113 278 send /active/deform/show \$1;
+#X msg 119 425 send /active/deform/grid/columns \$1;
+#X msg 296 295 send /active/deform/spherize/light \$1;
+#X connect 1 0 18 0;
+#X connect 2 0 17 0;
+#X connect 3 0 16 0;
+#X connect 4 0 15 0;
+#X connect 5 0 19 0;
+#X connect 6 0 20 0;
+#X connect 7 0 13 0;
+#X connect 8 0 14 0;
+#X connect 10 0 12 0;
+#X connect 12 0 9 0;
+#X connect 13 0 11 0;
+#X connect 14 0 9 0;
+#X connect 15 0 11 0;
+#X connect 16 0 9 0;
+#X connect 17 0 9 0;
+#X connect 18 0 9 0;
+#X connect 19 0 11 0;
+#X connect 20 0 11 0;
+#X coords 0 -1 1 1 200 140 2 100 100;

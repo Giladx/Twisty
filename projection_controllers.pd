@@ -1,6 +1,6 @@
-#N canvas 73 268 775 442 10;
+#N canvas 127 283 775 442 10;
 #X obj 1 1 cnv 15 225 130 empty empty Projection_controllers 20 12
-0 14 -1 -262144 0;
+0 14 -33289 -262144 0;
 #X obj 117 42 bng 20 250 50 0 empty empty resync -9 -9 0 10 -258113
 -4034 -262144;
 #X obj 77 42 bng 20 250 50 0 empty empty stop -3 -9 0 10 -258113 -4034
@@ -11,8 +11,8 @@
 -4034 -262144;
 #X obj 221 391 s osc;
 #X msg 419 237 send /projection/resync;
-#X msg 392 184 send /projection/start;
-#X msg 403 211 send /projection/stop;
+#X msg 379 187 send /projection/start;
+#X msg 384 214 send /projection/stop;
 #X msg 377 162 send /projection/save;
 #X msg 368 135 send /projection/load;
 #X msg 348 110 send projection/mode/setup/on;
@@ -33,7 +33,7 @@
 #X obj 111 96 bng 20 250 50 0 empty empty empty -2 -9 0 10 -258113
 -4034 -262144;
 #X connect 1 0 6 0;
-#X connect 2 0 7 0;
+#X connect 2 0 8 0;
 #X connect 3 0 8 0;
 #X connect 4 0 16 0;
 #X connect 6 0 5 0;

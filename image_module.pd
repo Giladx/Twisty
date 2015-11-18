@@ -1,6 +1,6 @@
-#N canvas 213 261 943 672 10;
-#X obj 1 1 cnv 15 240 240 empty empty active_quad_image 20 12 0 14
--1 -262144 0;
+#N canvas 213 276 943 672 10;
+#X obj 1 1 cnv 15 180 200 empty empty active_quad_image 20 12 0 14
+-33289 -262144 0;
 #X obj -221 403 s osc;
 #X obj -119 128 float;
 #X obj -88 154 float;
@@ -10,36 +10,36 @@
 #X obj -211 231 trigger;
 #X obj -47 278 float;
 #X obj -45 248 float;
-#X floatatom 158 144 4 0 0 0 - - -;
-#X floatatom 159 164 4 0 0 0 - - -;
+#X floatatom 141 120 4 0 0 0 - - -;
+#X floatatom 142 140 4 0 0 0 - - -;
 #X msg -142 89 send /active/img;
 #X msg -220 327 send /active/img/color \$1 \$2 \$3 \$4;
 #X msg -220 354 send /active/img/mult/x \$1;
 #X msg -221 377 send /active/img/mult/y \$1;
-#X obj 23 69 hsl 128 15 0 1 0 0 empty empty red 5 8 0 10 -258113 -1
+#X obj 8 55 hsl 128 15 0 1 0 0 empty empty red 5 8 0 10 -258113 -1
 -262144 0 1;
-#X obj 23 84 hsl 128 15 0 1 0 0 empty empty green 5 8 0 10 -4034 -1
+#X obj 8 70 hsl 128 15 0 1 0 0 empty empty green 5 8 0 10 -4034 -1
 -262144 0 1;
-#X obj 23 100 hsl 128 15 0 1 0 0 empty empty blue 5 8 0 10 -4160 -33289
+#X obj 8 86 hsl 128 15 0 1 0 0 empty empty blue 5 8 0 10 -4160 -33289
 -262144 0 1;
-#X obj 23 116 hsl 128 15 0 1 0 0 empty empty alpha 5 8 0 10 -162280
+#X obj 8 102 hsl 128 15 0 1 0 0 empty empty alpha 5 8 0 10 -162280
 -1 -262144 0 1;
-#X obj 23 145 hsl 128 15 0 10 0 0 empty empty scale_x 5 8 0 10 -66577
+#X obj 8 121 hsl 128 15 0 10 0 0 empty empty scale_x 5 8 0 10 -66577
 -262144 -262144 0 1;
-#X obj 23 166 hsl 128 15 0 10 0 0 empty empty scale_y 5 8 0 10 -66577
+#X obj 8 140 hsl 128 15 0 10 0 0 empty empty scale_y 5 8 0 10 -66577
 -262144 -262144 0 1;
 #X msg -143 44 send /active/img/load;
-#X obj 108 46 bng 15 250 50 0 empty empty load_img 20 8 0 9 -258113
+#X obj 93 32 bng 15 250 50 0 empty empty load_img 20 8 0 9 -258113
 -4034 -262144;
 #X obj -143 66 s osc;
 #X obj 28 325 s osc;
 #X msg 10 259 send /active/img/hmirror \$1;
 #X msg 55 300 send /active/img/vmirror \$1;
-#X obj 21 189 tgl 15 0 empty empty flip_h 17 7 0 10 -99865 -262144
--262144 0 1;
-#X obj 22 210 tgl 15 0 empty empty flip_v 20 7 0 10 -99865 -262144
--262144 0 1;
-#X obj 20 45 tgl 15 0 empty empty img_on/off 17 7 0 10 -99865 -262144
+#X obj 6 160 tgl 15 0 empty empty flip_h 17 7 0 10 -99865 -262144 -262144
+0 1;
+#X obj 7 181 tgl 15 0 empty empty flip_v 20 7 0 10 -99865 -262144 -262144
+0 1;
+#X obj 5 31 tgl 15 0 empty empty img_on/off 17 7 0 10 -99865 -262144
 -262144 0 1;
 #X connect 2 0 6 0;
 #X connect 3 0 7 0;
@@ -73,4 +73,4 @@
 #X connect 28 0 26 0;
 #X connect 29 0 27 0;
 #X connect 30 0 12 0;
-#X coords 0 -1 1 1 240 240 1 1 1;
+#X coords 0 -1 1 1 180 200 1 1 1;

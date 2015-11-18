@@ -1,6 +1,6 @@
-#N canvas 1 79 1265 944 10;
-#X obj 1 1 cnv 15 210 240 empty empty active_quad_solid_color 20 12
-0 14 -1 -262144 0;
+#N canvas 3 80 1265 941 10;
+#X obj 1 1 cnv 15 180 225 empty empty quad_solid_color 20 12 0 14 -33289
+-262144 0;
 #X obj -384 108 float;
 #X obj -343 137 float;
 #X obj -326 170 float;
@@ -15,33 +15,33 @@
 #X obj -141 325 pack f f f f;
 #X obj -194 304 trigger;
 #X obj -21 349 float;
-#X floatatom 157 210 4 0 0 0 - - -;
+#X floatatom 151 204 4 0 0 0 - - -;
 #X msg -296 349 send /active/solid/color \$1 \$2 \$3 \$4;
 #X msg -302 372 send /active/solid/trans/color \$1 \$2 \$3 \$4;
 #X msg -301 396 send /active/solid/trans/duration \$1;
 #X msg -272 412 send /active/solid;
 #X msg -91 456 send /active/solid/trans;
-#X obj 18 52 hsl 128 15 0 1 0 0 empty empty red 5 8 0 10 -258113 -1
+#X obj 12 46 hsl 128 15 0 1 0 0 empty empty red 5 8 0 10 -258113 -1
 -262144 0 1;
-#X obj 18 67 hsl 128 15 0 1 0 0 empty empty green 5 8 0 10 -4034 -1
+#X obj 12 61 hsl 128 15 0 1 0 0 empty empty green 5 8 0 10 -4034 -1
 -262144 0 1;
-#X obj 18 83 hsl 128 15 0 1 0 0 empty empty blue 5 8 0 10 -4160 -33289
+#X obj 12 77 hsl 128 15 0 1 0 0 empty empty blue 5 8 0 10 -4160 -33289
 -262144 0 1;
-#X obj 18 99 hsl 128 15 0 1 0 0 empty empty alpha 5 8 0 10 -162280
+#X obj 12 93 hsl 128 15 0 1 0 0 empty empty alpha 5 8 0 10 -162280
 -1 -262144 0 1;
-#X obj 20 141 hsl 128 15 0 1 0 0 empty empty red 5 8 0 10 -258113 -1
+#X obj 14 135 hsl 128 15 0 1 0 0 empty empty red 5 8 0 10 -258113 -1
 -262144 0 1;
-#X obj 20 156 hsl 128 15 0 1 0 0 empty empty green 5 8 0 10 -4034 -1
+#X obj 14 150 hsl 128 15 0 1 0 0 empty empty green 5 8 0 10 -4034 -1
 -262144 0 1;
-#X obj 20 172 hsl 128 15 0 1 0 0 empty empty blue 5 8 0 10 -4160 -33289
+#X obj 14 166 hsl 128 15 0 1 0 0 empty empty blue 5 8 0 10 -4160 -33289
 -262144 0 1;
-#X obj 20 188 hsl 128 15 0 1 0 0 empty empty alpha 5 8 0 10 -162280
+#X obj 14 182 hsl 128 15 0 1 0 0 empty empty alpha 5 8 0 10 -162280
 -1 -262144 0 1;
-#X obj 20 210 hsl 128 15 0 60 0 0 empty empty trans_duration 20 8 0
+#X obj 14 204 hsl 128 15 0 60 0 0 empty empty trans_duration 20 8 0
 10 -99865 -1 -262144 0 1;
-#X obj 15 32 tgl 15 0 empty empty solid_color 20 7 0 10 -99865 -262144
+#X obj 9 26 tgl 15 0 empty empty solid_color 20 7 0 10 -99865 -262144
 -262144 0 1;
-#X obj 17 119 tgl 15 0 empty empty transition_color 20 7 0 10 -99865
+#X obj 11 113 tgl 15 0 empty empty transition_color 20 7 0 10 -99865
 -262144 -262144 0 1;
 #X connect 1 0 5 0;
 #X connect 2 0 6 0;
@@ -80,4 +80,4 @@
 #X connect 29 0 14 0;
 #X connect 30 0 19 0;
 #X connect 31 0 20 0;
-#X coords 0 -1 1 1 210 240 1 1 1;
+#X coords 0 -1 1 1 180 225 1 1 1;

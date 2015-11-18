@@ -1,3 +1,60 @@
-#N canvas 122 315 450 300 10;
-#X msg 136 131 send /active/mask;
-#X msg 181 57 send /active/mask/invert;
+#N canvas 54 173 687 555 10;
+#X obj 100 100 cnv 15 160 240 empty empty mask 20 12 0 14 -33289 -262144
+0;
+#X obj 111 124 tgl 15 0 empty empty mask_on/off 17 7 0 10 -99865 -262144
+-262144 1 1;
+#X obj 150 180 hsl 32 15 0 1 0 0 empty empty top 5 8 0 10 -99865 -262144
+-262144 0 1;
+#X obj 188 202 hsl 32 15 0 1 0 0 empty empty right 5 8 0 10 -99865
+-262144 -262144 0 1;
+#X obj 150 225 hsl 32 15 0 1 0 0 empty empty bottom 5 8 0 10 -99865
+-262144 -262144 0 1;
+#X obj 107 201 hsl 32 15 0 1 0 0 empty empty left 5 8 0 10 -99865 -262144
+-262144 0 1;
+#X floatatom 186 179 5 0 0 0 - - -;
+#X floatatom 143 200 5 0 0 0 - - -;
+#X floatatom 223 201 5 0 0 0 - - -;
+#X floatatom 184 224 5 0 0 0 - - -;
+#X obj 111 144 tgl 15 0 empty empty mask_invert 17 7 0 10 -99865 -262144
+-262144 1 1;
+#X text 269 203 Rectangular;
+#X obj -23 168 s osc;
+#X msg -97 125 send /active/mask/invert \$1;
+#X msg -99 101 send /active/mask \$1;
+#X msg -156 251 send /active/crop/rectangular/top \$1;
+#X msg -149 277 send /active/crop/rectangular/left \$1;
+#X msg -145 296 send /active/crop/rectangular/right \$1;
+#X msg -156 330 send /active/crop/rectangular/bottom \$1;
+#X obj 118 274 hsl 128 15 0 1 0 0 empty empty x 5 8 0 10 -99865 -262144
+-262144 0 1;
+#X obj 118 296 hsl 128 15 0 1 0 0 empty empty y 5 8 0 10 -99865 -262144
+-262144 0 1;
+#X obj 118 316 hsl 128 15 0 2 0 0 empty empty radius 5 8 0 10 -99865
+-262144 -262144 0 1;
+#X msg -52 394 send /active/crop/circular/x \$1;
+#X msg -30 417 send /active/crop/circular/y \$1;
+#X msg -34 441 send /active/crop/circular/radius \$1;
+#X text 271 298 Circular;
+#X connect 1 0 14 0;
+#X connect 2 0 6 0;
+#X connect 2 0 15 0;
+#X connect 3 0 8 0;
+#X connect 3 0 17 0;
+#X connect 4 0 9 0;
+#X connect 4 0 18 0;
+#X connect 5 0 7 0;
+#X connect 5 0 16 0;
+#X connect 10 0 13 0;
+#X connect 13 0 12 0;
+#X connect 14 0 12 0;
+#X connect 15 0 12 0;
+#X connect 16 0 12 0;
+#X connect 17 0 12 0;
+#X connect 18 0 12 0;
+#X connect 19 0 22 0;
+#X connect 20 0 23 0;
+#X connect 21 0 24 0;
+#X connect 22 0 12 0;
+#X connect 23 0 12 0;
+#X connect 24 0 12 0;
+#X coords 0 -1 1 1 160 240 2 100 100;
