@@ -1,0 +1,77 @@
+#N canvas 1 82 1265 685 10;
+#X obj 1 1 cnv 15 195 180 empty empty quad_svideo 20 12 0 14 -33289
+-262144 0;
+#X obj -208 152 float;
+#X obj -345 241 float;
+#X obj -199 516 s osc;
+#X msg -215 181 send /active/video/mult/x \$1;
+#X msg -206 223 send /active/video/mult/y \$1;
+#X msg -346 283 send /active/video/speed \$1;
+#X obj 12 86 hsl 128 15 0 15 0 0 empty empty svideo_num -2 -10 0 10
+-99865 -1 -262144 0 1;
+#X floatatom 146 129 4 0 0 0 - - -;
+#X floatatom 146 153 4 0 0 0 - - -;
+#X obj 13 130 hsl 128 15 0 10 0 0 empty empty scale_x 5 8 0 10 -66577
+-262144 -262144 0 1;
+#X obj 13 151 hsl 128 15 0 10 0 0 empty empty scale_y 5 8 0 10 -66577
+-262144 -262144 0 1;
+#X obj -359 212 hsl 128 15 -2 2 0 0 empty empty video_speed -2 -8 0
+10 -4032 -33289 -262144 0 1;
+#X msg -459 152 -2;
+#X msg -431 152 -1;
+#X msg -401 152 0;
+#X msg -370 152 1;
+#X msg -339 152 2;
+#X obj 36 522 s osc;
+#X obj 83 58 tgl 15 0 empty empty flip_h 17 7 0 10 -99865 -262144 -262144
+0 1;
+#X obj 8 57 tgl 15 0 empty empty flip_v 20 7 0 10 -128992 -262144 -262144
+0 1;
+#X obj 9 31 tgl 15 0 empty empty video_on/off 20 7 0 10 -99865 -262144
+-262144 0 1;
+#X obj 10 108 tgl 15 0 empty empty green_screen 20 7 0 10 -99865 -262144
+-262144 0 1;
+#X obj 146 63 tgl 15 0 empty empty fit 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 146 87 tgl 15 0 empty empty keep 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 247 176 send /active/video/svfit \$1;
+#X msg 252 213 send /active/video/svaspect \$1;
+#X msg -266 -48 send /active/video/svvflip \$1;
+#X msg -241 -16 send /active/video/svhflip \$1;
+#X msg -504 -5 send /active/video/svgreenscreen \$1;
+#X msg -502 33 send /active/video/sharedvideo \$1;
+#X msg -511 -40 send /active/video/sharedvideonum \$1;
+#X text 230 47 riped fro quad_video;
+#X obj -245 114 float;
+#X connect 1 0 5 0;
+#X connect 2 0 6 0;
+#X connect 4 0 18 0;
+#X connect 5 0 18 0;
+#X connect 6 0 3 0;
+#X connect 7 0 31 0;
+#X connect 10 0 8 0;
+#X connect 10 0 33 0;
+#X connect 11 0 9 0;
+#X connect 11 0 1 0;
+#X connect 12 0 2 0;
+#X connect 13 0 12 0;
+#X connect 14 0 12 0;
+#X connect 15 0 12 0;
+#X connect 16 0 12 0;
+#X connect 17 0 12 0;
+#X connect 19 0 27 0;
+#X connect 20 0 28 0;
+#X connect 21 0 30 0;
+#X connect 22 0 29 0;
+#X connect 23 0 25 0;
+#X connect 24 0 26 0;
+#X connect 25 0 18 0;
+#X connect 26 0 3 0;
+#X connect 27 0 18 0;
+#X connect 28 0 18 0;
+#X connect 29 0 18 0;
+#X connect 30 0 18 0;
+#X connect 31 0 3 0;
+#X connect 33 0 4 0;
+#X coords 0 -1 1 1 195 180 1 1 1;

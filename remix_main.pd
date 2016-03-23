@@ -1,4 +1,4 @@
-#N canvas 0 85 1280 939 10;
+#N canvas 1 82 1264 685 10;
 #X obj -1 0 cnv 15 1270 1010 empty empty Twisty_lpmtX_controller 15
 20 0 24 -33289 -262144 0;
 #X obj 204 431 image_module 0;
@@ -69,4 +69,5 @@
 #X obj 708 173 mask_deform;
 #X obj 395 208 kinect_module;
 #X obj 739 649 blend_modes;
+#X obj 9 556 svideo_module;
 #X coords 0 -1 1 1 1270 1010 1 0 0;
